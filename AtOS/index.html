@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Home NAS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--Clock-->
+		<script>
+			function startTime() {
+			    var today = new Date();
+			    var h = today.getHours();
+			    var m = today.getMinutes();
+			    var s = today.getSeconds();
+			    var day = today.getDay();
+			    var weekday = new Array(7);
+			    weekday[0] =  "Sunday";
+				weekday[1] = "Monday";
+				weekday[2] = "Tuesday";
+				weekday[3] = "Wednesday";
+				weekday[4] = "Thursday";
+				weekday[5] = "Friday";
+				weekday[6] = "Saturday";
+			    m = checkTime(m);
+			    s = checkTime(s);
+			    document.getElementById('mainClock').innerHTML =
+			    "Aakash Prasad | "+ weekday[day] +" "+ h + ":" + m + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			    var t = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+			    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			    return i;
+			}
+		</script>
+		<!--Nav bar padding-top as 20%-->
+		<style>
+			.sidenav {
+			    height: 100%;
+			    width: 200px;
+			    position: fixed;
+			    z-index: 10;
+			    top: 0;
+			    left: 0;
+			    background-color: #111;
+			    overflow-x: hidden;
+			    padding-top: 2%;
+			}
+
+			.sidenav a {
+			    padding: 6px 6px 6px 32px;
+			    text-decoration: none;
+			    font-size: 25px;
+			    color: #818181;
+			    display: block;
+			}
+
+			.sidenav a:hover {
+			    color: #f1f1f1;
+			}
+			.sidenav a:focus {
+    			background:#e54960; /*color when selected*/
+    			color: #FFF;
+			}
+
+			.main {
+			    margin-left: 200px; /* Same as the width of the sidenav */
+			}
+
+			@media screen and (max-height: 450px) {
+			  .sidenav {padding-top: 15px;}
+			  .sidenav a {font-size: 18px;}
+			}
+			/*Avatar div positioning*/
+			.avatar {
+				border-radius:50%; 
+				margin-left:25%; 
+				margin-right:25%;
+				border:3px solid white;
+			}
+			/*Search bar*/
+			.searchBar {
+			    /*position: absolute;
+			    top: 3px;
+			    left: 5px;
+			    height: 20px;
+			    width: 20px;
+			    z-index: 10;
+			    border-radius: 10px;
+			    border: none;
+			    background: #000; /* Set the bg image here. with "no-repeat" */
+			    position: relative;
+			    width: 190px;
+			    height: 30px; /*was 30px*/
+			    margin-left:auto; 
+			    margin-right: auto;
+			    padding-bottom: 20%;
+			    border-bottom: 1px solid rgba(255,255,255,.25);
+			}
+			.round {
+				width: 100%;
+			    border-radius: 15px;
+			    border: 1px #000 solid;
+			    padding: 5px 5px 5px 25px;
+			    position: absolute;
+			    /*background: #4d4d4d;*/
+			    top: 0;
+			    left: 0;
+			    z-index: 5;
+			}
+			/*Options in nav bar positioning*/
+			.navBarOptions {
+				height: 80%;
+  				margin: 0 auto;
+  				/*padding-top: 50%;
+  				padding-bottom: 50%;*/
+			}
+			/*Clock position*/
+			.topcorner{
+			   position:absolute;
+			   top:5%;
+			   right:0;
+			  }
+			/*User image position*/
+			.user-img{
+			    position:absolute;
+			   	top:5%;
+			   	right:13%;
+			}
+		</style>
+	</head>
+	<body onload="startTime()">
+		<!--Implement nav bar-->
+		<div class="sidenav">
+			<div>
+				<img width="50%" class="avatar" height="50%" src="images/avatar.png">
+				<!--a href="#"><h1 style="font-size:200%;">Server</h1><br /><br /><br /><br /><br /><br /><br /><br /></a-->
+			</div>
+			<div class="searchBar">
+				<input type="text" name="search" class="round" placeholder="Search..">
+				
+			</div>
+			<div class="navBarOptions">
+				<a href="./index.html">Main Page</a>
+				<a href="./photos.html">Photos</a>
+		  		<a href="#">Movies</a>
+		  		<a href="#">Files</a>
+		  		<a href="#">System</a>
+		  		<a href="./blankPage.html">Blank Page</a>
+		  	</div>
+		</div>
+		
+		<!--div align="right" id="aakash">
+				<div class="right">
+					<ul class="copyright">
+						<li><br />&nbsp;<br /><div id="txt"></div></li><li>&nbsp;</li>
+					</ul>
+				</div>
+		</div-->
+		<div class="topcorner" id="mainClock"></div>
+		<!--<div class="user-img" id="user-img" ><img width="30" height="30" src="images/thumbs/03.jpg"></div>   NEED TO WORK ON THIS.  -->
+		<div id="wrapper" align="right">
+
+			<div id="main">
+				<div id="reel">
+
+					<!-- Header Item -->
+
+						<div id="header" class="item" data-width="400">
+							<div class="inner">
+								<h1>Promethean</h1>
+								<p>Please choose your media <br />
+								option</p>
+							</div>
+						</div>
+
+					<!-- Thumb Items -->
+
+						<article class="item thumb" data-width="282">
+							<h2>You really got me</h2>
+							<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt=""></a>
+						</article>
+
+						<article class="item thumb" data-width="384">
+							<h2>Ad Infinitum</h2>
+							<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt=""></a>
+						</article>
+
+						<article class="item thumb" data-width="274">
+							<h2>Different.</h2>
+							<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" alt=""></a>
+						</article>
+
+						<article class="item thumb" data-width="282">
+							<h2>Elysium</h2>
+							<a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" alt=""></a>
+						</article>
+
+						<article class="item thumb" data-width="476">
+							<h2>Kingdom of the Wind</h2>
+							<a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt=""></a>
+						</article>
+
+						<article class="item thumb" data-width="232">
+							<h2>The Pursuit</h2>
+							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt=""></a>
+						</article>
+
+						<article class="item thumb" data-width="352">
+							<h2>Boundless</h2>
+							<a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt=""></a>
+						</article>
+
+						<article class="item thumb" data-width="348">
+							<h2>The Spectators</h2>
+							<a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt=""></a>
+						</article>
+
+					<!-- Filler Thumb Items (just for demonstration purposes) -->
+						<article class="item thumb" data-width="476"><h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt=""></a></article>
+						<article class="item thumb" data-width="232"><h2>The Pursuit</h2><a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt=""></a></article>
+						<article class="item thumb" data-width="352"><h2>Boundless</h2><a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt=""></a></article>
+						<article class="item thumb" data-width="348"><h2>The Spectators</h2><a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt=""></a></article>
+						<article class="item thumb" data-width="282"><h2>You really got me</h2><a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt=""></a></article>
+						<article class="item thumb" data-width="384"><h2>Ad Infinitum</h2><a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt=""></a></article>
+						<article class="item thumb" data-width="274"><h2>Different.</h2><a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" alt=""></a></article>
+						<article class="item thumb" data-width="282"><h2>Elysium</h2><a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" alt=""></a></article>
+
+				</div>
+				
+			</div>
+
+			
+
+
+			<!--div id="footer">
+				<div class="left">
+					<p>This is <strong>Parallelism</strong>, a responsive portfolio site template by <a href="http://html5up.net">HTML5 UP</a>. Free for personal<br />
+					and commercial use under the <a href="http://html5up.net/license">Creative Commons Attribution</a> license.</p>
+				</div>
+				<div class="right">
+					<ul class="contact">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+						<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Aakash Prasad</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</div-->
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

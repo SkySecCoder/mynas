@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Home NAS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--Clock-->
+		<script>
+			function startTime() {
+			    var today = new Date();
+			    var h = today.getHours();
+			    var m = today.getMinutes();
+			    var s = today.getSeconds();
+			    var day = today.getDay();
+			    var weekday = new Array(7);
+			    weekday[0] =  "Sunday";
+				weekday[1] = "Monday";
+				weekday[2] = "Tuesday";
+				weekday[3] = "Wednesday";
+				weekday[4] = "Thursday";
+				weekday[5] = "Friday";
+				weekday[6] = "Saturday";
+			    m = checkTime(m);
+			    s = checkTime(s);
+			    document.getElementById('mainClock').innerHTML =
+			    "Aakash Prasad | "+ weekday[day] +" "+ h + ":" + m + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			    var t = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+			    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			    return i;
+			}
+		</script>
+		<!--Nav bar padding-top as 20%-->
+		<style>
+			.sidenav {
+			    height: 100%;
+			    width: 200px;
+			    position: fixed;
+			    z-index: 10;
+			    top: 0;
+			    left: 0;
+			    background-color: #111;
+			    overflow-x: hidden;
+			    padding-top: 2%;
+			}
+
+			.sidenav a {
+			    padding: 6px 6px 6px 32px;
+			    text-decoration: none;
+			    font-size: 25px;
+			    color: #818181;
+			    display: block;
+			}
+
+			.sidenav a:hover {
+			    color: #f1f1f1;
+			}
+			.sidenav a:focus {
+    			background:#e54960; /*color when selected*/
+    			color: #FFF;
+			}
+
+			.main {
+			    margin-left: 200px; /* Same as the width of the sidenav */
+			}
+
+			@media screen and (max-height: 450px) {
+			  .sidenav {padding-top: 15px;}
+			  .sidenav a {font-size: 18px;}
+			}
+			/*Avatar div positioning*/
+			.avatar {
+				border-radius:50%; 
+				margin-left:25%; 
+				margin-right:25%;
+				border:3px solid white;
+			}
+			/*Search bar*/
+			.searchBar {
+			    /*position: absolute;
+			    top: 3px;
+			    left: 5px;
+			    height: 20px;
+			    width: 20px;
+			    z-index: 10;
+			    border-radius: 10px;
+			    border: none;
+			    background: #000; /* Set the bg image here. with "no-repeat" */
+			    position: relative;
+			    width: 190px;
+			    height: 30px; /*was 30px*/
+			    margin-left:auto; 
+			    margin-right: auto;
+			    padding-bottom: 20%;
+			    border-bottom: 1px solid rgba(255,255,255,.25);
+			}
+			.round {
+				width: 100%;
+			    border-radius: 15px;
+			    border: 1px #000 solid;
+			    padding: 5px 5px 5px 25px;
+			    position: absolute;
+			    /*background: #4d4d4d;*/
+			    top: 0;
+			    left: 0;
+			    z-index: 5;
+			}
+			/*Options in nav bar positioning*/
+			.navBarOptions {
+				height: 80%;
+  				margin: 0 auto;
+  				/*padding-top: 50%;
+  				padding-bottom: 50%;*/
+			}
+			/*Clock position*/
+			.topcorner{
+				height: 100%;
+			   	position:absolute;
+			   	top:33%;
+			  	right:0;
+			  	vertical-align: center;
+			  }
+			/*User image position*/
+			.user-img{
+			    position:absolute;
+			   	top:5%;
+			   	right:13%;
+			}
+
+			/*Main Div*/
+			.mainDiv {
+				margin-top: 5%;
+				margin-left: 200px;
+				height: 90%;
+				/*background-color: blue; */
+				/*width: 84%;*/
+				margin-right: 0;
+				z-index: -5;
+				overflow: scroll;
+			}
+			.topnav {
+			 	height: 10%;
+			    width: 100%;
+			    position: fixed;
+			    z-index: 9;
+			    top: 0;
+			    /*background-color: #e54960; /*#111*/
+			    overflow-y: hidden;
+			    padding-top: 2%;
+			}
+			/*Dafrig*/
+			* {
+  				  box-sizing: border-box;
+			}
+
+
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+		</style>
+	</head>
+	<body style="overflow: hidden;" onload="startTime()">
+		<!--Implement nav bar-->
+		<div class="sidenav">
+			<div>
+				<img width="50%" class="avatar" height="50%" src="images/avatar.png">
+			</div>
+			<div class="searchBar">
+				<input type="text" name="search" class="round" placeholder="Search..">
+				
+			</div>
+			<div class="navBarOptions">
+				<a href="./index.html">Main Page</a>
+				<a href="./photos.html">Photos</a>
+		  		<a href="#">Movies</a>
+		  		<a href="#">Files</a>
+		  		<a href="#">System</a>
+		  		<a href="./blankPage.html">Blank Page</a>
+		  	</div>
+		</div>
+		<div class="topnav">
+			<div class="topcorner" id="mainClock">
+			</div>
+		</div>
+		
+
+
+<!--My content-->
+ 		
+<!--My content-->
+
+
+
+		
+
+	</body>
+</html>
