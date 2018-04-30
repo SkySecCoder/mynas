@@ -38,17 +38,32 @@
 				left: 0px;
 				background-color: #7E63C4;
 				padding-bottom: 10%;
+				z-index: 5;
 			}
 			.sidenavoption {
-				background-color: blue;
+				/*background-color: blue;*/
 				position: absolute;
 				/*left: 0px;*/
-				margin-left: 25%;
+				margin-left: 0%;
 				margin-right: 0%;
 				/*width: 70%;*/
 				top: 35%;
+				width: 100%;
 				z-index: 5;
 				bottom: 25%;
+			}
+			/*Little purple line next to options*/
+			.minisidenavoption {
+				position: absolute;
+				/*left: 0px;*/
+				margin-left: 0%;
+				margin-right: 0%;
+				/*width: 70%;*/
+				top: 0%;
+				width: 45%;
+				z-index: 4;
+				bottom: 0%;
+				background-color: #7E63C4;
 			}
 			.avatar {
 				border-radius:50%; 
@@ -61,7 +76,7 @@
 			}
 			/*photos CSS*/
 			.mainDiv {
-				margin-top: 5%;
+				margin-top: 6%;
 				margin-left: 16%;
 				height: 90%;
 				/*background-color: blue; */
@@ -91,6 +106,31 @@
 			    margin-top: 8px;
 			    vertical-align: middle;
 			}
+			/*Search Bar*/
+			.searchBar {
+			    position: absolute;
+			    width: 25%;
+			    height: 30px; /*was 30px*/
+			    margin-left:17%; 
+			    margin-top: 3%;
+			    padding-bottom: 20%;
+			    /*border-bottom: 1px solid rgba(255,255,255,.25);*/
+			    background-color: #232741; /*Bg color*/
+			}
+			.round {
+				width: 100%;
+				height: 5%;
+			    border-radius: 15px;
+			    border: 1px #232741 solid; /*BG color*/
+			    padding: 5px 5px 5px 25px;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    z-index: 5;
+			    background-color: #353b62; /*lighter bg color*/
+			    color: white;
+			}
+			/**/
 
 			/* Responsive layout - makes a two column-layout instead of four columns */
 			@media screen and (max-width: 800px) {
@@ -113,23 +153,30 @@
 		</style>
 	</head>
 	<body style="overflow: hidden;">
-
 		<div id="particles-js">
+			<div class="searchBar">
+				<input type="text" name="search" class="round" placeholder="Search..">
+			</div>
 			<div class="sidenavbar">
 				<div class="sidenavprofilebox">
 					<div>
 						<img class="avatar" src="assets/avatar.png">
 					</div>
 				</div>
+				<div class="minisidenavoption"></div>
 				<div class="sidenavoption">
-					<table style="height:100%; background-color:red; margin-left:0%; margin-top:0%; margin-right:0%; z-index:4;">
+					<table style="height:100%; margin-left:28%; margin-top:0%; margin-right:0%; z-index:4;width:75%;">
 						<tr>
-						    <th>Author(s)</th>
-						    <th>Book Title</th>
+						    <td><p style="color:white;"><img src="./assets/photoIcon.png" style="max-width:20%; width:auto; height:auto;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Photos</p></td>
 						</tr>
 						<tr>
-						    <td>John Steinbeck</td>
-						    <td>The Grapes of Wrath</td>
+						    <td><p style="color:white;"><img src="./assets/musicIcon.png" style="max-width:20%; width:auto; height:auto;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Music</p></td>
+						</tr>
+						<tr>
+						    <td><p style="color:white;"><img src="./assets/movieIcon.png" style="max-width:20%; width:auto; height:auto;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Movies</p></td>
+						</tr>
+						<tr>   
+						    <td><p style="color:white;"><img src="./assets/settingsIcon.png" style="max-width:20%; width:auto; height:auto;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Settings</p></td>
 						</tr>
 					</table>
 				</div>
@@ -138,9 +185,9 @@
 	 		<div class="mainDiv">
 	 			<div class="row"> 
 					  <div class="column">
+					    <img src="https://images7.alphacoders.com/411/thumb-1920-411820.jpg" style="width:100%">
 					    <img src="https://images.unsplash.com/photo-1517911122989-a8bcd823bed3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=086174d766416e5e29c775a4013d790c&w=1000&q=80" style="width:100%">
 					    <img src="https://www.hdwallpapers.in/walls/bicycle-wide.jpg" style="width:100%">
-					    <img src="https://images7.alphacoders.com/411/thumb-1920-411820.jpg" style="width:100%">
 					    <img src="https://www.planwallpaper.com/static/images/2015-wallpaper_111525594_269.jpg" style="width:100%">
 					    
 					    <img src="https://wallpaperscraft.com/image/switzerland_alps_mountains_night_beautiful_landscape_99817_1920x1080.jpg" style="width:100%">
@@ -155,10 +202,10 @@
 					    <img src="https://www.planwallpaper.com/static/images/2015-wallpaper_111525594_269.jpg" style="width:100%">				    
 					  </div>  
 					  <div class="column">
+					    <img src="https://www.planwallpaper.com/static/images/2015-wallpaper_111525594_269.jpg" style="width:100%">
 					    <img src="https://images.unsplash.com/photo-1517911122989-a8bcd823bed3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=086174d766416e5e29c775a4013d790c&w=1000&q=80" style="width:100%">
 					    <img src="https://www.hdwallpapers.in/walls/bicycle-wide.jpg" style="width:100%">
 					    <img src="https://images7.alphacoders.com/411/thumb-1920-411820.jpg" style="width:100%">
-					    <img src="https://www.planwallpaper.com/static/images/2015-wallpaper_111525594_269.jpg" style="width:100%">
 					    <img src="https://pbs.twimg.com/profile_images/779305023507271681/GJJhYpD2_400x400.jpg" style="width:100%">
 					    <img src="https://wallpaperscraft.com/image/switzerland_alps_mountains_night_beautiful_landscape_99817_1920x1080.jpg" style="width:100%">
 					  </div>
