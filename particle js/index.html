@@ -39,12 +39,21 @@
 			</div>
 			<!--My content-->
 	 		<div class="mainDiv">
-				<div>
-					<input type="button" id="btn" class="btn btn-default" value="click me">
+				<a href="#" class="openpic" style="text-decoration:none; color:white;" href="javascript:" onclick="changeImg('./assets/avatar2.png');">Say photo</a>
+				<a href="#" class="openpic" style="text-decoration:none; color:white;" href="javascript:" onclick="changeImg('./assets/avatar.png');">Say settings</a>
+				<!--a href="#" class="openpic" style="text-decoration:none; color:white;">Say Hi</a-->
+
+				<div id="showme" style="color:white; display:none">
+					Howdy
+					<img style="vertical-align:middle; width:30%; height:30%;" id="imageHolder" />
+					<a href="#" class="closepic" style="text-decoration:none; color:white;">    X</a>
 				</div>
-				<div id="Create" style="display:none">
-					Hello
-				</div>
+
+				<br />
+				<br />
+				<br />
+				Hello
+
 	 		</div>
 			<!--My content-->
 		</div>
@@ -52,11 +61,22 @@
 		@section Scripts{
 		@Scripts.Render("~/bundles/jqueryval")
 		<script type="text/javascript">
-			$(document).ready(function () {
-	 		   $("#btn").click(function () {
-			        $("#Create").toggle();
-	 		   });
+			$(document).ready(function(){
+    			$(".openpic").click(function(){
+       				$("#showme").show();
+    			});
 			});
+
+			$(document).ready(function(){
+    			$(".closepic").click(function(){
+       				$("#showme").hide();
+    			});
+			});
+
+			function changeImg(image){
+				var imghol = document.getElementById("imageHolder");
+				imghol.src = image;
+			}
 		</script>
 		}
 		<!--My script-->
