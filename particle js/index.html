@@ -7,6 +7,19 @@
 		<!--meta name="viewport" content="width=device-width, initial-scale=1" /-->
 		<script src="./js/jquery-3.3.1.min.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.imagepreviewstyle {
+				color:white;
+				display:none; 
+				z-index: 10; 
+				margin-top:0%; 
+				margin-left:0%;
+				height:100%; 
+				width:100%; 
+				position: absolute;
+				background-image: url("assets/imagepreviewbgimage.png");
+			}
+		</style>
 	</head>
 	<body style="overflow: hidden;">
 		<div id="particles-js">
@@ -40,36 +53,33 @@
 			<!--My content-->
 	 		<div class="mainDiv">
 				<a href="#" class="openpic" style="text-decoration:none; color:white;" href="javascript:" onclick="changeImg('./assets/avatar2.png');">Say photo</a>
-				<a href="#" class="openpic" style="text-decoration:none; color:white;" href="javascript:" onclick="changeImg('./assets/avatar.png');">Say settings</a>
+				<a href="#" class="openpic" style="text-decoration:none; color:white;" href="javascript:" onclick="changeImg('https://newevolutiondesigns.com/images/freebies/space-wallpaper-5.jpg');">&emsp;&emsp;Say settings</a>
 				<!--a href="#" class="openpic" style="text-decoration:none; color:white;">Say Hi</a-->
-
-				<div id="showme" style="color:white; display:none">
-					Howdy
-					<img style="vertical-align:middle; width:30%; height:30%;" id="imageHolder" />
-					<a href="#" class="closepic" style="text-decoration:none; color:white;">    X</a>
-				</div>
-
-				<br />
-				<br />
-				<br />
-				Hello
-
 	 		</div>
+	 		<div id="imagepreview" class="imagepreviewstyle">
+	 			<a href="#" class="closepic" style="text-decoration:none; color:white; position:absolute; top:5%; right:5%;">X</a>
+	 			<div style="margin-left:5%; margin-right:3%; margin-top:5%; margin-bottom:7%; width:92%; height:84%;  position:absolute; ">
+	 				<img style="display: block; margin:auto; vertical-align: middle; max-width:90%; max-height:100%; width:auto; height:auto; " id="imageHolder" />
+	 			</div>
+			</div>
 			<!--My content-->
 		</div>
+
+
+
 		<!--My script-->
 		@section Scripts{
 		@Scripts.Render("~/bundles/jqueryval")
 		<script type="text/javascript">
 			$(document).ready(function(){
     			$(".openpic").click(function(){
-       				$("#showme").show();
+       				$("#imagepreview").show();
     			});
 			});
 
 			$(document).ready(function(){
     			$(".closepic").click(function(){
-       				$("#showme").hide();
+       				$("#imagepreview").hide();
     			});
 			});
 
