@@ -39,10 +39,16 @@
 			</div>
 			<!--My content-->
 	 		<div class="mainDiv">
+	 			<b class="pageHeader">
+	 				<font size="6">
+	 					Photos
+	 				</font>
+	 			</b>
+	 			<br /><br />
 	 			<div class="row"> 
 					  <div class="column">
-					    <img src="https://images7.alphacoders.com/411/thumb-1920-411820.jpg" style="width:100%">
-					    <img src="https://images.unsplash.com/photo-1517911122989-a8bcd823bed3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=086174d766416e5e29c775a4013d790c&w=1000&q=80" style="width:100%">
+					    <a href="#" class="openpic" style="text-decoration:none; color:white;" href="javascript:" onclick="changeImg('https://images7.alphacoders.com/411/thumb-1920-411820.jpg');"><img src="https://images7.alphacoders.com/411/thumb-1920-411820.jpg" style="width:100%"></a>
+					    <a href="#" class="openpic" style="text-decoration:none; color:white;" href="javascript:" onclick="changeImg('https://images.unsplash.com/photo-1517911122989-a8bcd823bed3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=086174d766416e5e29c775a4013d790c&w=1000&q=80');"><img src="https://images.unsplash.com/photo-1517911122989-a8bcd823bed3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=086174d766416e5e29c775a4013d790c&w=1000&q=80" style="width:100%"></a>
 					    <img src="https://www.hdwallpapers.in/walls/bicycle-wide.jpg" style="width:100%">
 					    <img src="https://www.planwallpaper.com/static/images/2015-wallpaper_111525594_269.jpg" style="width:100%">
 					    
@@ -115,9 +121,40 @@
 					  </div>
 				</div>
 			</div>
+	 		<div id="imagepreview" class="imagepreviewstyle">
+	 			<a href="#" class="closepic" style="text-decoration:none; color:white; position:absolute; top:5%; right:5%;">X</a>
+	 			<div style="margin-left:5%; margin-right:3%; margin-top:5%; margin-bottom:7%; width:92%; height:84%;  position:absolute; ">
+	 				<img style="display: block; margin:auto; vertical-align: middle; max-width:90%; max-height:100%; width:auto; height:auto; " id="imageHolder" />
+	 			</div>
+			</div>			
 			<!--My content-->
 		</div>
 
+
+
+		<!--My script-->
+		@section Scripts{
+		@Scripts.Render("~/bundles/jqueryval")
+		<script type="text/javascript">
+			$(document).ready(function(){
+    			$(".openpic").click(function(){
+       				$("#imagepreview").show();
+    			});
+			});
+
+			$(document).ready(function(){
+    			$(".closepic").click(function(){
+       				$("#imagepreview").hide();
+    			});
+			});
+
+			function changeImg(image){
+				var imghol = document.getElementById("imageHolder");
+				imghol.src = image;
+			}
+		</script>
+		}
+		<!--My script-->
 		<!--script src="./js/particles.js"></script-->
 		<!--script src="./js/app.js"></script-->
 	</body>

@@ -124,7 +124,24 @@ html,body {
 }
 /**/
 /*Preview of selected picture*/
-
+.imagepreviewstyle {
+	color:white;
+	display:none; 
+	z-index: 10; 
+	margin-top:0%; 
+	margin-left:0%;
+	height:100%; 
+	width:100%; 
+	position: absolute;
+	background-image: url("../imagepreviewbgimage.png");
+}
+/**/
+/*Page header present under mainDiv*/
+.pageHeader {
+	color: white;
+	margin-left: 1%;
+	height: 100%;
+}
 /**/
 
 /* Responsive layout - makes a two column-layout instead of four columns */

@@ -7,6 +7,24 @@
 		<!--meta name="viewport" content="width=device-width, initial-scale=1" /-->
 		<script src="./js/jquery-3.3.1.min.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.musicplayerimage {
+				/*background-color:red; */
+				height:100%; 
+				width:35%; 
+				margin-left:0%; 
+				margin-top:0%; 
+				float:left;
+			}
+			.musicplayersongs {
+				/*background-color:blue;*/
+				height:100%; 
+				width:65%; 
+				margin-right:0%; 
+				margin-top:0%; 
+				float:right;
+			}
+		</style>
 	</head>
 	<body style="overflow: hidden;">
 		<div id="particles-js">
@@ -38,13 +56,14 @@
 				</div>
 			</div>
 			<!--My content-->
-	 		<div class="mainDiv">
-	 			<b class="pageHeader">
-	 				<font size="6" style="margin-left:0%;">
-	 					Movies
-	 				</font>
-	 			</b>
-	 			<br /><br />				
+	 		<div class="mainDiv" style="width:83%; ">
+	 			<div class="musicplayerimage">
+	 				<div style="height:40%; margin-left:10%; margin-right:10%; width:80%; margin-top:10%;">
+	 					<img src="./assets/albumArt/background.jpg" style="height:100%; margin-left:auto; margin-right:auto; display:block;">
+	 				</div>
+	 			</div>	
+	 			<div class="musicplayersongs">
+	 			</div>		
 	 		</div>
 			<!--My content-->
 		</div>
