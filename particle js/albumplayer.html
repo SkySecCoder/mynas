@@ -9,20 +9,36 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
 			.musicplayerimage {
-				/*background-color:red; */
+				/*background-color:red;*/
 				height:100%; 
 				width:35%; 
 				margin-left:0%; 
 				margin-top:0%; 
 				float:left;
 			}
-			.musicplayersongs {
-				/*background-color:blue;*/
+			.musicplayerlist {
+				/*background-image: url("./assets/imagepreviewbgimage.png");*/
 				height:100%; 
 				width:65%; 
 				margin-right:0%; 
 				margin-top:0%; 
 				float:right;
+			}
+			.mainmusicplayer {
+				bottom: 0;
+				margin-left: 15%;
+				height: 15%;
+				width: 100%;
+				background-color: blue; 
+				/*width: 84%;*/
+				margin-right: 1%;
+				position: absolute;
+				z-index: 8;
+			}
+			.songlist td {
+			    text-align: left;
+			    padding: 10px;
+			    color: white;
 			}
 		</style>
 	</head>
@@ -56,14 +72,189 @@
 				</div>
 			</div>
 			<!--My content-->
-	 		<div class="mainDiv" style="width:83%; ">
+	 		<div class="mainDiv" style="width:83%; height:75%;">
 	 			<div class="musicplayerimage">
 	 				<div style="height:40%; margin-left:10%; margin-right:10%; width:80%; margin-top:10%;">
 	 					<img src="./assets/albumArt/background.jpg" style="height:100%; margin-left:auto; margin-right:auto; display:block;">
 	 				</div>
 	 			</div>	
-	 			<div class="musicplayersongs">
+	 			<div class="musicplayerlist" style="overflow-x:auto;">
+	 				<table class="songlist" style="margin-top:5%; width:100%;">
+						<tr>
+							<td>Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack<hr></td>
+						</tr>
+						<tr>
+							<td>	Mark Ronson - Uptown Funk ft. Bruno Mars<hr></td>
+						</tr>
+						<tr>
+							<td>	Justin Bieber - Sorry (PURPOSE : The Movement<hr></td>
+						</tr>
+						<tr>
+							<td>	Maroon 5 - Sugar<hr></td>
+						</tr>
+						<tr>
+							<td>	Taylor Swift - Shake It<hr></td>
+						</tr>
+						<tr>
+							<td>	Enrique Iglesias - Bailando (Español) ft. Descemer Bueno, Gente De Zon<hr></td>
+						</tr>
+						<tr>
+							<td>	Katy Perry - Roar<hr></td>
+						</tr>
+						<tr>
+							<td>	Major Lazer & DJ Snake - Lean On (feat. MØ) (Official Mus<hr></td>
+						</tr>
+						<tr>
+							<td>	Katy Perry - Dark Horse (Official) ft. Juicy J<hr></td>
+						</tr>
+						<tr>
+							<td>	Taylor Swift - Blank Sp<hr></td>
+						</tr>
+						<tr>
+							<td>	Ed Sheeran - Thinking Out Loud [Official Video]<hr></td>
+						</tr>
+						<tr>
+							<td>	OneRepublic - Counting Stars<hr></td>
+						</tr>
+						<tr>
+							<td>	The Chainsmokers - Closer (Lyric) ft. Halsey<hr></td>
+						</tr>
+						<tr>
+							<td>	Calvin Harris - This Is What You Came For (Official Video) ft. Rihann<hr></td>
+						</tr>
+						<tr>
+							<td>	Justin Bieber - What Do You Mean?<hr></td>
+						</tr>
+						<tr>
+							<td>	Clean Bandit - Rockabye ft. Sean Paul & Anne-Marie [Official Video]<hr></td>
+						</tr>
+						<tr>
+							<td>	Ellie Goulding - Love Me Like You D<hr></td>
+						</tr>
+						<tr>
+							<td>	Alan Walker - F<hr></td>
+						</tr>
+						<tr>
+							<td>	Fifth Harmony - Worth It ft. Kid Ink<hr></td>
+						</tr>
+						<tr>
+							<td>	Avicii - Wake Me Up<hr></td>
+						</tr>
+						<tr>
+							<td>	Eminem - Love The Way You Lie ft. Rihann<hr></td>
+						</tr>
+						<tr>
+							<td>	Silentó - Watch Me (Whip/Nae N<hr></td>
+						</tr>
+						<tr>
+							<td>	J. Balvin - Ay Vamos<hr></td>
+						</tr>
+						<tr>
+							<td>	LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock<hr></td>
+						</tr>
+						<tr>
+							<td>	Drake - Hotline Bling<hr></td>
+						</tr>
+						<tr>
+							<td>	twenty one pilots: Stressed Out [OFFICIAL VIDEO]<hr></td>
+						</tr>
+						<tr>
+							<td>	Adele - Rolling in the Deep<hr></td>
+						</tr>
+						<tr>
+							<td>	Ellie Goulding - Burn<hr></td>
+						</tr>
+						<tr>
+							<td>	Jennifer Lopez - On The Floor ft. Pitbu<hr></td>
+						</tr>
+						<tr>
+							<td>	The Weeknd - The Hills<hr></td>
+						</tr>
+						<tr>
+							<td>	Calvin Harris - Summer<hr></td>
+						</tr>
+						<tr>
+							<td>	Taylor Swift - Bad Blood ft. Kendrick Lamar<hr></td>
+						</tr>
+						<tr>
+							<td>	Rihanna - Diamonds<hr></td>
+						</tr>
+						<tr>
+							<td>	PSY - GENTLEMAN M/<hr></td>
+						</tr>
+						<tr>
+							<td>	Martin Garrix - Animals<hr></td>
+						</tr>
+						<tr>
+							<td>	Bruno Mars - Just The Way You Are [OFFICIAL VIDEO]<hr></td>
+						</tr>
+						<tr>
+							<td>	Ariana Grande - Problem ft. Iggy Az<hr></td>
+						</tr>
+						<tr>
+							<td>	Katy Perry - Firework<hr></td>
+						</tr>
+						<tr>
+							<td>	Ricky Martin - La Mordidita (Official Video) ft. Yotu<hr></td>
+						</tr>
+						<tr>
+							<td>	Carly Rae Jepsen - Call Me Mayb<hr></td>
+						</tr>
+						<tr>
+							<td>	The Chainsmokers - Don't Let Me Down (Video) ft. Day<hr></td>
+						</tr>
+						<tr>
+							<td>	Pitbull - Timber ft. Ke$h<hr></td>
+						</tr>
+						<tr>
+							<td>	Pharrell Williams - Happy (Official Mus<hr></td>
+						</tr>
+						<tr>
+							<td>	Rihanna - Work (Explicit) ft. Drak<hr></td>
+						</tr>
+						<tr>
+							<td>	twenty one pilots: Heathens (from Suicide Squad: The Album) [OFFICIAL VIDEO]<hr></td>
+						</tr>
+						<tr>
+							<td>	Don Omar - Danza Kuduro ft. Lucenz<hr></td>
+						</tr>
+						<tr>
+							<td>	J Balvin - 6 AM ft. Farruk<hr></td>
+						</tr>
+						<tr>
+							<td>	Shawn Mendes - Stitches<hr></td>
+						</tr>
+						<tr>
+							<td>	Shakira - La La La (Brazil 2014) ft. Carlinhos Brown<hr></td>
+						</tr>
+						<tr>
+							<td>	Ariana Grande - Break Free ft. Z<hr></td>
+						</tr>
+						<tr>
+							<td>	Coldplay - Paradis<hr></td>
+						</tr>
+						<tr>
+							<td>	The Weeknd - Can't Feel My F<hr></td>
+						</tr>
+						<tr>
+							<td>	Imagine Dragons - Radioactiv<hr></td>
+						</tr>
+						<tr>
+							<td>	Shakira - Can't Remember to Forget You ft. Rihann<hr></td>
+						</tr>
+						<tr>
+							<td>	Pitbull - Rain Over Me ft. Marc Anthony<hr></td>
+						</tr>
+						<tr>
+							<td>	Iggy Azalea - Fancy ft. Charli XCX<hr></td>
+						</tr>
+						<tr>
+							<td>	Numb (Official Video) - Linkin Park<hr></td>
+						</tr>					    					    					    
+					</table>
 	 			</div>		
+	 		</div>
+	 		<div class="mainmusicplayer">
 	 		</div>
 			<!--My content-->
 		</div>
